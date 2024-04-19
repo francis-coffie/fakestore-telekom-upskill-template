@@ -1,0 +1,31 @@
+.container{
+height: 100vh;
+  background-color: #d2d3d3;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.auth{
+  display: flex;
+  width: 800px;
+  min-height: 400px;
+  margin: 200px auto;
+}
+
+.left{
+  width:50%;
+  background: #003F62;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right{
+  width:50%;
+  background-color: rgb(255, 255, 255);
+  padding: 20px 100px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}

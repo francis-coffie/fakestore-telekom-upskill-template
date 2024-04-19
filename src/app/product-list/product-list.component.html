@@ -1,0 +1,31 @@
+
+<app-topnav></app-topnav>
+<router-outlet></router-outlet>
+<div class="header">
+  <h2>Let shop</h2>
+</div>
+
+<div class="section">
+  <div class="items">
+    <div class="item" *ngFor="let item of productsList">
+     <a [routerLink]="['/detail/'+item.id,]">
+      <div class="item-content">
+        <img src="{{item.image}}" alt="{{ item.name }}">
+        <div class="info">
+          <div class="title-style">          
+            <h3>{{ item.title }}</h3>
+          </div>
+          <h3>{{ item.category }}</h3>
+          <p class="price" >Gh&#x20B5; {{ item.price}}</p>
+          <div class="button-style">
+            <button>Add to Cart</button>
+            <button>View product</button>
+          </div>
+         
+        </div>
+      </div>
+     </a>
+    </div>
+  </div>
+
+</div>
