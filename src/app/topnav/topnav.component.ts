@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   template: `
     <nav class="navbar">
       <div class="navbar-brand" >
-      <a href="home" [routerLink]="['/']"  >
+      <a href="home" >
         <svg
           fill="#fff"
           height="30px"
@@ -96,6 +96,7 @@ import { Router } from '@angular/router';
 })
 export class TopnavComponent {
   token = '';
+
   constructor(private authService: AuthService, private router: Router) {
     this.token = this.authService.getToken();
   }

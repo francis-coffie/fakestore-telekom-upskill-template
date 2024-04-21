@@ -15,17 +15,16 @@ export class ProductDetailComponent {
   productDetail: Product | undefined;
   constructor(
     private route: ActivatedRoute,
-   private getproductService: ProductsService
+   private getproductService: ProductsService,
   ) {}
 
+  
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      const productId = +params.get('id')!; // `+` converts string to number, `!` is for non-null assertion
+      const productId = +params.get('id')!; 
       this.loadProductDetails(productId);
-
       this.getproductService.getProducts("/"+productId).subscribe((Response) => {
         this.productDetail = Response as Product;
-        console.log("TTTTT", Response);
         
       });
     });
@@ -35,4 +34,6 @@ export class ProductDetailComponent {
     console.log("hello", productId)
 
   }
+
+
 }
